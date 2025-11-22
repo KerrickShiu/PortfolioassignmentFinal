@@ -1,32 +1,63 @@
 import Project from '../models/projectmodel.js';
 
 export const getAllProjects = async (req, res) => {
-  const projects = await Project.find();
-  res.json(projects);
+  try {
+    const projects = await Project.find();
+    res.json(projects);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 };
 
 export const getProjectById = async (req, res) => {
-  const project = await Project.findById(req.params.id);
-  res.json(project);
+  try {
+    const project = await Project.findById(req.params.id);
+    if (!project) return res.status(404).json({ error: "Project not found" });
+    res.json(project);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
 };
 
 export const createProject = async (req, res) => {
-  const project = new Project(req.body);
-  await project.save();
-  res.status(201).json(project);
+  try {
+    const project = new Project(req.body);
+    await project.save();
+    res.status(201).json(project);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
 };
 
 export const updateProject = async (req, res) => {
-  const project = await Project.findByIdAndUpdate(req.params.id, req.body, { new: true });
-  res.json(project);
+  try {
+    const project = await Project.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    if (!project) return res.status(404).json({ error: "Project not found" });
+    res.json(project);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
 };
 
 export const deleteProject = async (req, res) => {
-  await Project.findByIdAndDelete(req.params.id);
-  res.json({ message: 'Project deleted' });
+  try {
+    const project = await Project.findByIdAndDelete(req.params.id);
+    if (!project) return res.status(404).json({ error: "Project not found" });
+    res.json({ message: "Project deleted" });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
 };
 
 export const deleteAllProjects = async (req, res) => {
-  await Project.deleteMany({});
-  res.json({ message: 'All projects deleted' });
+  try {
+    await Project.deleteMany({});
+    res.json({ message: "All projects deleted" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 };
