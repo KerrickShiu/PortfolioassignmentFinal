@@ -1,0 +1,250 @@
+{
+    "title": "ProjectFlow",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 737,
+            "height": 680,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "http://localhost:5173/",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "http://localhost:5173/",
+                    "title": "Kerrick Shiu's Portfolio"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#root > div"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div"
+                ],
+                [
+                    "pierce/#root > div"
+                ]
+            ],
+            "offsetY": 109.70000076293945,
+            "offsetX": 608
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Sign Up"
+                ],
+                [
+                    "a:nth-of-type(8)"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/nav/a[8]"
+                ],
+                [
+                    "pierce/a:nth-of-type(8)"
+                ],
+                [
+                    "text/Sign Up"
+                ]
+            ],
+            "offsetY": 26.887481689453125,
+            "offsetX": 55.5999755859375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Name"
+                ],
+                [
+                    "#_r_0_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_0_\"]"
+                ],
+                [
+                    "pierce/#_r_0_"
+                ]
+            ],
+            "offsetY": 34,
+            "offsetX": 178
+        },
+        {
+            "type": "change",
+            "value": "F",
+            "selectors": [
+                [
+                    "aria/Name"
+                ],
+                [
+                    "#_r_0_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_0_\"]"
+                ],
+                [
+                    "pierce/#_r_0_"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "f",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Fake Man",
+            "selectors": [
+                [
+                    "aria/Name"
+                ],
+                [
+                    "#_r_0_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_0_\"]"
+                ],
+                [
+                    "pierce/#_r_0_"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Email"
+                ],
+                [
+                    "#_r_1_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_1_\"]"
+                ],
+                [
+                    "pierce/#_r_1_"
+                ]
+            ],
+            "offsetY": 5,
+            "offsetX": 178
+        },
+        {
+            "type": "change",
+            "value": "fakeman@",
+            "selectors": [
+                [
+                    "aria/Email"
+                ],
+                [
+                    "#_r_1_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_1_\"]"
+                ],
+                [
+                    "pierce/#_r_1_"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "2",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "fakeman@email.com",
+            "selectors": [
+                [
+                    "aria/Email"
+                ],
+                [
+                    "#_r_1_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_1_\"]"
+                ],
+                [
+                    "pierce/#_r_1_"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#_r_2_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_2_\"]"
+                ],
+                [
+                    "pierce/#_r_2_"
+                ]
+            ],
+            "offsetY": 52,
+            "offsetX": 171
+        },
+        {
+            "type": "change",
+            "value": "123123123",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#_r_2_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_2_\"]"
+                ],
+                [
+                    "pierce/#_r_2_"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/SIGN UP"
+                ],
+                [
+                    "button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/div/form/button"
+                ],
+                [
+                    "pierce/button"
+                ]
+            ],
+            "offsetY": 16,
+            "offsetX": 78
+        }
+    ]
+}
