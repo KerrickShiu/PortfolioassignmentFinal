@@ -18,7 +18,7 @@ app.use(helmet());
 app.use(cors());
 
 app.use("/api/users", userRoutes);
-
+app.use(express.static(path.join(CURRENT_WORKING_DIR, "dist/app")))
 app.use((err, req, res, next) => {
   if (err.name === "UnauthorizedError") {
     res.status(401).json({ error: err.name + ": " + err.message });
